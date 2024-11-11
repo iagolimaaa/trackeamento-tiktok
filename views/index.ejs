@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard de Métricas do TikTok</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <h1>Dashboard de Métricas do TikTok</h1>
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Data</th>
+        <th>Impressões</th>
+        <th>Cliques</th>
+        <th>Gasto</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% metrics.forEach(metric => { %>
+        <tr>
+          <td><%= metric.date %></td>
+          <td><%= metric.impressions %></td>
+          <td><%= metric.clicks %></td>
+          <td><%= metric.spend %></td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+</body>
+</html>
